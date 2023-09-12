@@ -1,0 +1,6 @@
+Aryan:
+
+Diego:
+
+Charlotte: 
+- build out react stack, finish setting up mongodb
