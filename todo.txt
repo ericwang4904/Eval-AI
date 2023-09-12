@@ -1,6 +1,6 @@
-Aryan:
-
-Diego:
-
-Charlotte: 
+=======
+TODO:
+ - Find optimal prompt
+ 
+ Charlotte: 
 - build out react stack, finish setting up mongodb
