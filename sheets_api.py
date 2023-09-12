@@ -5,10 +5,10 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 import pandas as pd
-
+import numpy as np
 
 class SheetsAPI:
-    def __init__(self, scopes):
+    def __init__(self, scopes=['https://www.googleapis.com/auth/spreadsheets.readonly']):
         self.scopes = scopes
         self.creds = self.configure_credentials()
 
@@ -39,12 +39,9 @@ class SheetsAPI:
         
         df = pd.DataFrame(values)
         return df
-
-
-sheet_handler = SheetsAPI(scopes=['https://www.googleapis.com/auth/spreadsheets.readonly'])
-
-values = sheet_handler.get_sheet_values(
-    range='Sheet1!A:B',
-    sheet_id='1_-qCpMMQcA5NDnfGbXa4D79ki-Rjjz-gnyb2KXiNdsQ'
-)
-print(values)
+    
+    def get_dict_from_sheet_values(self, values):
+        students = list(values.drop(0, axis=1).iloc[0])
+        notes = values.drop(0, axis=1).iloc[1:]
+        notes = [list(notes[col]) for col in notes.columns]
+        return {student: note for student, note in zip(students, notes)}
