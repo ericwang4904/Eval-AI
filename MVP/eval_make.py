@@ -21,8 +21,7 @@ else:
 
 # Generate the complete message
 message = f"{student_name}, it was an absolute pleasure teaching you again. During open sessions, you gave {open_session_word} feedback and advice to your peers.\n\n"
-message += "Additionally, throughout the mental health unit, you added helpful knowledge and perspectives. "
-message += "For example, during the lesson on current events and pop culture, you eloquently described the harms when society ignores people's struggles.\n\n"
+message += "Additionally, throughout the mental health unit, you added helpful knowledge and perspectives. For example, during the lesson on current events and pop culture, you eloquently described the harms when society ignores people's struggles.\n\n"
 message += "Your group presentation on Indigenous and Non-western Perspectives was excellent. I appreciated the important dialogue that professionals do not meet the current need of mental health struggles in any region of the world and less so in indigenous and non-Western regions. "
 message += "I thought your group did a thorough job describing local practices to obtain positive mental health and treatments for mental illnesses in Latin America, East Asia, and Pacific Islands. Finally, your argument that Asian Americans receive less mental health support, because they are less likely to seek care and receive it was well supported. "
 message += "I agree with you that strong factors are the model minority myth that perpetuates cultural stigmas against reaching out and racism/stereotypes that could lead to underdiagnosis or misdiagnosis.\n\n"
